@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "landing": {
+      "title": "linguisticPro — Language practice & preparation",
+      "description": "Start free with English language practice, IELTS-style tests and a personal study plan. Explore linguisticPro's multilingual vision and Free, Plus and Pro plans."
+    },
+    "welcome": {
+      "title": "Welcome",
+      "description": "Practice smarter for IELTS, understand your mistakes and reach your target band."
+    },
+    "signIn": {
+      "title": "Sign in",
+      "description": "Sign in to continue your IELTS study plan."
+    },
+    "signUp": {
+      "title": "Create your account",
+      "description": "Create a free linguisticPro account and get a personal IELTS study plan."
+    },
+    "forgotPassword": {
+      "title": "Reset your password",
+      "description": "Get a link to reset your linguisticPro password."
+    },
+    "onboarding": {
+      "title": "Set up your plan",
+      "description": "Tell us your goals and we'll build your personal IELTS study plan."
+    },
+    "pricing": {
+      "title": "Free, Plus & Pro plans",
+      "description": "Explore proposed linguisticPro plans: start with free language practice and compare Plus and Pro practice-test benefits."
+    },
+    "home": {
+      "title": "Home",
+      "description": "Your IELTS target, progress and next step."
+    },
+    "practice": {
+      "title": "Practice",
+      "description": "Make room for a little progress, every day."
+    },
+    "review": {
+      "title": "Review",
+      "description": "Turn yesterday’s mistakes into tomorrow’s strengths."
+    },
+    "progress": {
+      "title": "Progress",
+      "description": "Your IELTS journey, one step at a time."
+    },
+    "studyPlan": {
+      "title": "Study plan",
+      "description": "A weekly rhythm built around your goals and schedule."
+    },
+    "mockTests": {
+      "title": "Mock tests",
+      "description": "Get ready for the real test day."
+    },
+    "savedQuestions": {
+      "title": "Saved questions",
+      "description": "Keep the questions you want to revisit."
+    },
+    "notifications": {
+      "title": "Notifications",
+      "description": "Your learning updates, all in one place."
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Personalize your linguisticPro appearance and study preferences."
+    },
+    "reading": {
+      "title": "Reading analysis",
+      "description": "See where in the passage each IELTS Reading answer was hiding."
+    },
+    "listening": {
+      "title": "Listening analysis",
+      "description": "See exactly what you missed in each IELTS Listening test."
+    },
+    "writing": {
+      "title": "Writing analysis",
+      "description": "Band scores and line-by-line feedback on your IELTS Writing tasks."
+    },
+    "speaking": {
+      "title": "Speaking analysis",
+      "description": "Fluency, vocabulary, grammar and pronunciation feedback for each IELTS Speaking part."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "practice": "Practice",
+    "review": "Review",
+    "progress": "Progress",
+    "studyPlan": "Study plan",
+    "mockTests": "Mock tests",
+    "savedQuestions": "Saved questions",
+    "notifications": "Notifications",
+    "settings": "Settings",
+    "yourWorkspace": "Your workspace",
+    "mainNavigation": "Main navigation",
+    "workspaceNavigation": "Workspace navigation",
+    "mobileNavigation": "Mobile navigation",
+    "homeLink": "linguisticPro home",
+    "collapseMenu": "Collapse menu",
+    "collapseSidebar": "Collapse sidebar",
+    "expandSidebar": "Expand sidebar",
+    "openProfileMenu": "Open profile menu",
+    "signOut": "Sign out",
+    "tagline": "Your next chapter starts here.",
+    "momentumTitle": "A little, every day.",
+    "momentumBody": "You're building momentum."
+  },
+  "common": {
+    "back": "Back"
+  },
+  "auth": {
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "fields": {
+      "email": "Email",
+      "password": "Password",
+      "fullName": "Full name",
+      "confirmPassword": "Confirm password"
+    },
+    "placeholders": {
+      "email": "you@example.com",
+      "currentPassword": "Your password",
+      "newPassword": "At least 8 characters",
+      "confirmPassword": "Repeat password",
+      "fullName": "Amara Ndiaye"
+    },
+    "signIn": {
+      "title": "Welcome back",
+      "subtitle": "Pick up right where you left off.",
+      "submit": "Sign in",
+      "forgot": "Forgot password?",
+      "footer": "New to linguisticPro?",
+      "footerLink": "Create an account"
+    },
+    "signUp": {
+      "title": "Create your account",
+      "subtitle": "It takes less than a minute. Your plan comes next.",
+      "submit": "Create account",
+      "footer": "Already have an account?",
+      "footerLink": "Sign in",
+      "agree": "I agree to the <terms>Terms of Service</terms> and <privacy>Privacy Policy</privacy>."
+    },
+    "forgot": {
+      "title": "Forgot your password?",
+      "subtitle": "Enter the email you signed up with and we'll send you a reset link.",
+      "submit": "Send reset link",
+      "sentTitle": "Check your inbox",
+      "sentBody": "If an account exists for <email>{email}</email>, you'll receive a reset link shortly.",
+      "backToSignIn": "Back to sign in",
+      "differentEmail": "Use a different email"
+    },
+    "strength": {
+      "weak": "Weak",
+      "fair": "Fair",
+      "good": "Good",
+      "strong": "Strong"
+    },
+    "social": {
+      "divider": "or continue with",
+      "google": "Google",
+      "apple": "Apple"
+    },
+    "validation": {
+      "emailInvalid": "Enter a valid email address",
+      "passwordMin6": "Password must be at least 6 characters",
+      "passwordMin8": "Use at least 8 characters",
+      "nameRequired": "Tell us your name",
+      "passwordsMismatch": "Passwords don't match",
+      "termsRequired": "Please accept the terms to continue"
+    }
+  },
+  "errors": {
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you're looking for doesn't exist or has been moved.",
+    "errorTitle": "This page didn't load",
+    "errorBody": "Something went wrong on our end. You can try refreshing or head back home.",
+    "tryAgain": "Try again",
+    "goHome": "Go home",
+    "loading": "Loading"
+  }
+}
