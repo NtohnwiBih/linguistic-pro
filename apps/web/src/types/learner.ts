@@ -1,4 +1,4 @@
-import type { Skill } from "@/lib/skills";
+import type { SkillSlug } from "@/lib/skills";
 
 export type IeltsVariant = "academic" | "general";
 
@@ -15,5 +15,5 @@ export interface LearnerProfile {
   testDate: string | null;
   minutesPerDay: number;
   days: string[];
-  focus: Skill[];
+  focus: SkillSlug[];
 }
