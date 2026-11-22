@@ -22,7 +22,7 @@ export function AnswerList({ answers, active, onSelect }: { answers: Answer[]; a
         );
       })}
       <div className="rounded-2xl border border-accent bg-accent/10 p-5">
-        <p className="text-xs font-bold uppercase tracking-widest text-accent-foreground">AI explanation · Question {active + 1}</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-accent">AI explanation · Question {active + 1}</p>
         <p className="mt-2 text-sm">{a.why}</p>
       </div>
     </div>
