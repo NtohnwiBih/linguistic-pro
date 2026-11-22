@@ -13,7 +13,7 @@ export default async function RootPage({ params }: LocalePageProps) {
   return (
     <>
       <EntryRedirect />
-      <div className="hidden md:block">
+      <div>
         <WebsiteShell>
           <Landing />
         </WebsiteShell>
