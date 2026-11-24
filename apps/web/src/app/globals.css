@@ -61,6 +61,12 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Onboarding */
+  --color-primary-soft: var(--primary-soft);
+  --color-mint: var(--mint);
+  --color-highlight: var(--highlight);
+  --color-reveal-foreground: var(--reveal-foreground);
 }
 
 :root {
@@ -111,6 +117,14 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
   --gradient-brand: radial-gradient(120% 90% at 0% 0%, oklch(0.42 0.1 185) 0%, transparent 60%), radial-gradient(90% 80% at 100% 100%, oklch(0.55 0.14 60 / 0.55) 0%, transparent 60%), oklch(0.2 0.03 192);
   --shadow-glow: 0 12px 40px -12px color-mix(in oklab, var(--primary) 55%, transparent);
+
+  /* Onboarding */
+  --primary-soft: oklch(0.94 0.04 175);
+  --mint: oklch(0.86 0.12 170);
+  --highlight: oklch(0.72 0.17 55);
+  --reveal-foreground: oklch(1 0 0);
+  --gradient-cta: linear-gradient(135deg, oklch(0.52 0.1 185), oklch(0.68 0.12 170));
+  --gradient-reveal: linear-gradient(160deg, oklch(0.32 0.07 195), oklch(0.2 0.04 210));
 }
 
 .dark {
@@ -158,6 +172,13 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+
+  /* Onboarding */
+  --primary-soft: oklch(0.3 0.05 185);
+  --mint: oklch(0.85 0.13 168);
+  --reveal-foreground: oklch(0 0 0);
+  --gradient-cta: linear-gradient(135deg, oklch(0.8 0.12 172), oklch(0.88 0.12 160));
+  --gradient-reveal: linear-gradient(160deg, oklch(0.95 0.05 170), oklch(0.86 0.08 175));
 }
 
 @layer base {
@@ -199,4 +220,71 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .home-page *, .home-page *::before, .home-page *::after { transition: none; animation: none; }
+}
+
+/* ==========================================================================
+ * Onboarding
+ * Tokens live in :root / .dark above. `bg-brand` is already the site's dark panel gradient, so the
+ * onboarding gradient button is `bg-cta`.
+ * ========================================================================== */
+
+@utility bg-glow {
+  background:
+    radial-gradient(60% 40% at 15% 0%, color-mix(in oklab, var(--mint) 22%, transparent), transparent 70%),
+    radial-gradient(50% 35% at 100% 100%, color-mix(in oklab, var(--highlight) 12%, transparent), transparent 70%),
+    var(--background);
+}
+@utility bg-cta { background-image: var(--gradient-cta); }
+@utility bg-reveal { background-image: var(--gradient-reveal); }
+@utility surface { border-radius: 1.25rem; border: 1px solid var(--border); background: var(--card); }
+
+@keyframes rise { from { opacity: 0; transform: translateY(18px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes word { from { opacity: 0; transform: translateY(0.5em) rotate(2deg); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes orb { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(30px, -40px) scale(1.15); } }
+@keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(0.95); } 70% { transform: scale(1.03); } 100% { transform: scale(1); } }
+@keyframes shimmer { from { background-position: -200% 0; } to { background-position: 200% 0; } }
+@keyframes confetti { 0% { transform: translateY(0) rotate(0); opacity: 1; } 100% { transform: translateY(70vh) rotate(540deg); opacity: 0; } }
+
+@utility animate-rise { animation: rise 0.6s cubic-bezier(.2, .8, .2, 1) both; }
+@utility animate-word { animation: word 0.7s cubic-bezier(.2, .8, .2, 1) both; display: inline-block; }
+@utility animate-orb { animation: orb 14s ease-in-out infinite; }
+@utility animate-pop { animation: pop 0.35s ease-out; }
+@utility animate-confetti { animation: confetti 2.8s ease-in forwards; }
+@utility text-shimmer {
+  background: linear-gradient(90deg, var(--primary), var(--mint), var(--highlight), var(--primary));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Personal-moment dialog */
+@keyframes moment-backdrop { from { opacity: 0; } to { opacity: 1; } }
+@keyframes moment-backdrop-out { to { opacity: 0; transform: scale(1.015); filter: blur(8px); } }
+@keyframes moment-art {
+  0% { opacity: 0; transform: translateY(24px) scale(0.72) rotate(-5deg); }
+  65% { opacity: 1; transform: translateY(-4px) scale(1.04) rotate(1deg); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes moment-float { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-8px) rotate(1deg); } }
+@keyframes moment-halo { 0%, 100% { transform: scale(0.94); opacity: 0.7; } 50% { transform: scale(1.06); opacity: 1; } }
+@keyframes moment-orbit { to { transform: rotate(360deg); } }
+@keyframes moment-orbit-reverse { to { transform: rotate(-360deg); } }
+@keyframes moment-spark { 0%, 100% { opacity: 0.5; transform: scale(0.8) rotate(-8deg); } 50% { opacity: 1; transform: scale(1.15) rotate(8deg); } }
+
+@utility animate-moment-backdrop { animation: moment-backdrop 0.35s ease-out both; }
+@utility animate-moment-backdrop-out { animation: moment-backdrop-out 0.38s ease-in both; }
+@utility animate-moment-art { animation: moment-art 0.85s 0.15s cubic-bezier(.16, 1, .3, 1) both, moment-float 4s 1.1s ease-in-out infinite; }
+@utility animate-moment-halo { animation: moment-halo 4s ease-in-out infinite; }
+@utility animate-moment-orbit { animation: moment-orbit 24s linear infinite; }
+@utility animate-moment-orbit-reverse { animation: moment-orbit-reverse 32s linear infinite; }
+@utility animate-moment-spark { animation: moment-spark 2.4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
